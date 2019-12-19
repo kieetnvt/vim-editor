@@ -11,15 +11,19 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+
 syntax on
 set rtp+=~/.vim/bundle/Vundle.vim
 
 " Bundle Plugins
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-projectionist'
 Plugin 'jlanzarotta/bufexplorer'
@@ -28,6 +32,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'vim-gitgutter'
 call vundle#end() " required
 
 " Soft-tabs, 2 spaces
@@ -89,6 +96,7 @@ map <Leader>q :q<CR>
 map <Leader>fq :q!<CR>
 map <Leader>nt :NERDTree<CR>
 map <Leader>v :NERDTreeFind<CR>
+map <Leader>gf :e Gemfile<CR>
 
 " Git
 map <Leader>co :Gread<CR>
@@ -140,3 +148,4 @@ endif
 
 " ctags -R ., for go to definition
 set tags=tags
+
